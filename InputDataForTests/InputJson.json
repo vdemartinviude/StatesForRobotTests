@@ -1,0 +1,95 @@
+{
+  "Records": [
+    {
+      "FirstName": "John",
+      "LastName": "Smith",
+      "CompanyName": "IT Solutions",
+      "RoleInCompany": "Analyst",
+      "Address": "98 North Road",
+      "Email": "jsmith@itsolutions.co.uk",
+      "PhoneNumber": "40716543298"
+    },
+    {
+      "FirstName": "Jane",
+      "LastName": "Dorsey",
+      "CompanyName": "MediCare",
+      "RoleInCompany": "Medical Engineer",
+      "Address": "11 Crown Street",
+      "Email": "jdorsey@mc.com",
+      "PhoneNumber": "40791345621"
+    },
+    {
+      "FirstName": "Albert",
+      "LastName": "Kipling",
+      "CompanyName": "Waterfront",
+      "RoleInCompany": "Accountant",
+      "Address": "22 Guild Street",
+      "Email": "kipling@waterfront.com",
+      "PhoneNumber": "40735416854"
+    },
+    {
+      "FirstName": "Michael",
+      "LastName": "Robertson",
+      "CompanyName": "MediCare",
+      "RoleInCompany": "IT Specialist",
+      "Address": "17 Farburn Terrace",
+      "Email": "mrobertson@mc.com",
+      "PhoneNumber": "40733652145"
+    },
+    {
+      "FirstName": "Doug",
+      "LastName": "Derrick",
+      "CompanyName": "Timepath Inc.",
+      "RoleInCompany": "Analyst",
+      "Address": "99 Shire Oak Road",
+      "Email": "dderrick@timepath.co.uk",
+      "PhoneNumber": "40799885412"
+    },
+    {
+      "FirstName": "Jessie",
+      "LastName": "Marlowe",
+      "CompanyName": "Aperture Inc.",
+      "RoleInCompany": "Scientist",
+      "Address": "27 Cheshire Street",
+      "Email": "jmarlowe@aperture.us",
+      "PhoneNumber": "40733154268"
+    },
+    {
+      "FirstName": "Stan",
+      "LastName": "Hamm",
+      "CompanyName": "Sugarwell",
+      "RoleInCompany": "Advisor",
+      "Address": "10 Dam Road",
+      "Email": "shamm@sugarwell.org",
+      "PhoneNumber": "40712462257"
+    },
+    {
+      "FirstName": "Michelle",
+      "LastName": "Norton",
+      "CompanyName": "Aperture Inc.",
+      "RoleInCompany": "Scientist",
+      "Address": "13 White Rabbit Street",
+      "Email": "mnorton@aperture.us",
+      "PhoneNumber": "40731254562"
+    },
+    {
+      "FirstName": "Stacy",
+      "LastName": "Shelby",
+      "CompanyName": "TechDev",
+      "RoleInCompany": "HR Manager",
+      "Address": "19 Pineapple Boulevard",
+      "Email": "sshelby@techdev.com",
+      "PhoneNumber": "40741785214"
+    },
+    {
+      "FirstName": "Lara",
+      "LastName": "Palmer",
+      "CompanyName": "Timepath Inc.",
+      "RoleInCompany": "Programmer",
+      "Address": "87 Orange Street",
+      "Email": "lpalmer@timepath.co.uk",
+      "PhoneNumber": "40731653845"
+    }
+
+  ]
+}
