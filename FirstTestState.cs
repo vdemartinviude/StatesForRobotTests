@@ -1,4 +1,5 @@
 ﻿using JsonDocumentsManager;
+using Microsoft.Extensions.Logging;
 using StatesAndEvents;
 using TheRobot;
 using TheRobot.MediatedRequests;
@@ -9,13 +10,16 @@ public class FirstTestState : BaseState
 {
     public override TimeSpan StateTimeout => TimeSpan.FromSeconds(3600);
 
-    public FirstTestState(Robot robot, InputJsonDocument inputdata, ResultJsonDocument resultJson) : base("FirstTestState", robot, inputdata, resultJson)
+    public FirstTestState(StateInfrastructure infrastructure) : base("FirstTestState", infrastructure)
     {
     }
 
     public override async Task Execute(CancellationToken token)
     {
-        await _robot.Execute(new MediatedNavigationRequest
+        ILogger log = _stateInfra.LoggerFactory.CreateLogger("FirstTestState");
+        log.LogCritical("Será que deu certo?");
+
+        await _stateInfra.Robot.Execute(new MediatedNavigationRequest
         {
             Url = "http://www.rpachallenge.com"
         }, token);
