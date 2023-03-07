@@ -7,6 +7,8 @@ namespace StatesForTests;
 
 public class FirstTestState : BaseState
 {
+    public override TimeSpan StateTimeout => TimeSpan.FromSeconds(3600);
+
     public FirstTestState(Robot robot, InputJsonDocument inputdata, ResultJsonDocument resultJson) : base("FirstTestState", robot, inputdata, resultJson)
     {
     }

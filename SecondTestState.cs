@@ -12,6 +12,8 @@ public class SecondTestState : BaseState
     {
     }
 
+    public override TimeSpan StateTimeout => TimeSpan.FromSeconds(3600);
+
     public override async Task Execute(CancellationToken token)
     {
         await _robot.Execute(new MediatedClickRequest
