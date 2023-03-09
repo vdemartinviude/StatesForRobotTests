@@ -19,69 +19,69 @@ public class SecondTestState : BaseState
     {
         await _stateInfra.Robot.Execute(new MediatedClickRequest
         {
-            BaseParameters = new() { By = By.XPath("//button[text()='Start']"), TimeOut = TimeSpan.FromSeconds(5) },
+            BaseParameters = new() { ByOrElement = new GenericWebElement(By.XPath("//button[text()='Start']")), TimeOut = TimeSpan.FromSeconds(5) },
             Kind = KindOfClik.ClickByDriver
         }, token);
         for (int i = 0; i < 10; i++)
         {
             await _stateInfra.Robot.Execute(new MediatedSetTextRequest
             {
-                BaseParameters = new() { By = By.XPath("//label[text()='Address']/../input") },
+                BaseParameters = new() { ByOrElement = new GenericWebElement(By.XPath("//label[text()='Address']/../input")) },
                 KindOfSetText = KindOfSetText.SetByWebDriver,
                 TextToSet = _stateInfra.InputJsonDocument.GetStringData($"$.Records[{i}].Address")
             }, token);
 
             await _stateInfra.Robot.Execute(new MediatedSetTextRequest
             {
-                BaseParameters = new() { By = By.XPath("//label[text()='Company Name']/../input") },
+                BaseParameters = new() { ByOrElement = new GenericWebElement(By.XPath("//label[text()='Company Name']/../input")) },
                 KindOfSetText = KindOfSetText.SetByWebDriver,
                 TextToSet = _stateInfra.InputJsonDocument.GetStringData($"$.Records[{i}].CompanyName")
             }, token);
 
             await _stateInfra.Robot.Execute(new MediatedSetTextRequest
             {
-                BaseParameters = new() { By = By.XPath("//label[text()='Last Name']/../input") },
+                BaseParameters = new() { ByOrElement = new GenericWebElement(By.XPath("//label[text()='Last Name']/../input")) },
                 KindOfSetText = KindOfSetText.SetByWebDriver,
                 TextToSet = _stateInfra.InputJsonDocument.GetStringData($"$.Records[{i}].LastName")
             }, token);
 
             await _stateInfra.Robot.Execute(new MediatedSetTextRequest
             {
-                BaseParameters = new() { By = By.XPath("//label[text()='Phone Number']/../input") },
+                BaseParameters = new() { ByOrElement = new GenericWebElement(By.XPath("//label[text()='Phone Number']/../input")) },
                 KindOfSetText = KindOfSetText.SetByWebDriver,
                 TextToSet = _stateInfra.InputJsonDocument.GetStringData($"$.Records[{i}].PhoneNumber")
             }, token);
 
             await _stateInfra.Robot.Execute(new MediatedSetTextRequest
             {
-                BaseParameters = new() { By = By.XPath("//label[text()='First Name']/../input") },
+                BaseParameters = new() { ByOrElement = new GenericWebElement(By.XPath("//label[text()='First Name']/../input")) },
                 KindOfSetText = KindOfSetText.SetByWebDriver,
                 TextToSet = _stateInfra.InputJsonDocument.GetStringData($"$.Records[{i}].FirstName")
             }, token);
 
             await _stateInfra.Robot.Execute(new MediatedSetTextRequest
             {
-                BaseParameters = new() { By = By.XPath("//label[text()='Role in Company']/../input") },
+                BaseParameters = new() { ByOrElement = new GenericWebElement(By.XPath("//label[text()='Role in Company']/../input")) },
                 KindOfSetText = KindOfSetText.SetByWebDriver,
                 TextToSet = _stateInfra.InputJsonDocument.GetStringData($"$.Records[{i}].RoleInCompany")
             }, token);
 
             await _stateInfra.Robot.Execute(new MediatedSetTextRequest
             {
-                BaseParameters = new() { By = By.XPath("//label[text()='Email']/../input") },
+                BaseParameters = new() { ByOrElement = new GenericWebElement(By.XPath("//label[text()='Email']/../input")) },
                 KindOfSetText = KindOfSetText.SetByWebDriver,
                 TextToSet = _stateInfra.InputJsonDocument.GetStringData($"$.Records[{i}].Email")
             }, token);
 
             await _stateInfra.Robot.Execute(new MediatedClickRequest
             {
-                BaseParameters = new() { By = By.XPath("//input[@type='submit']") },
+                BaseParameters = new() { ByOrElement = new GenericWebElement(By.XPath("//input[@type='submit']")) },
                 Kind = KindOfClik.ClickByDriver
             }, token);
         }
         var result = await _stateInfra.Robot.Execute(new MediatedElementExistsRequest
         {
-            BaseParameters = new() { By = By.XPath("//div[@class='message2']") }
+            BaseParameters = new() { ByOrElement = new GenericWebElement(By.XPath("//div[@class='message2']")) }
         }, token);
 
         var logger = _stateInfra.LoggerFactory.CreateLogger("SecondState");
