@@ -14,4 +14,9 @@ public class SecondStateGuard : IGuard<SecondTestState>
     {
         return true;
     }
+
+    public Task<bool> Condition(Robot robot, CancellationToken token)
+    {
+        throw new NotImplementedException();
+    }
 }
